@@ -17,5 +17,12 @@ export default defineConfig({
     hmr: {
       maxAge: 31536000, // 1 año en segundos
     },
+    headers: {
+      'Content-Security-Policy': {
+        'object-src': "'none'",
+        'script-src': ["'self'", "'unsafe-inline'"],
+        
+      },
+    },
   },
 })

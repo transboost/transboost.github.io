@@ -47,7 +47,7 @@
               <div class="text-container p-3">
                 <h1><strong>{{ welcomeTexts[currentLanguage][currentSlideIndex] }}</strong></h1>
                 <br />
-                <h3>{{ descriptions[currentLanguage][currentSlideIndex] }}</h3>
+                <h2>{{ descriptions[currentLanguage][currentSlideIndex] }}</h2>
               </div>
             </div>
             <div class="col-md-6">
@@ -167,14 +167,14 @@
                     ]
                   }}</strong>
                 </h1><br>
-                <h3>
+                <h2>
                   {{
                     descriptions[currentLanguage][
                       (currentSlideIndex + 4) %
                         descriptions[currentLanguage].length
                     ]
                   }}
-                </h3>
+                </h2>
               </div>
             </div>
             <div class="col-md-6">
@@ -210,6 +210,28 @@
       </button>
     </div>
 
+    <div class="container">
+  <div class="row mt-5">
+    <div class="col-md-8">
+      <p class="italic-text">
+        {{ supportTexts[currentLanguage] }}
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3 image-container"> 
+      <a href="/#/support">
+        <div class="text-overlay"></div>
+        <img
+          src="@/assets/imgsupport1.webp"
+          alt="logo JCYL"
+          style="max-width: 100%; height: auto;"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+
     <div v-if="showBanner" class="cookie-banner">
       <p>
         {{
@@ -224,6 +246,7 @@
       </button>
     </div>
   </div>
+
 </template>
 
 <script>
@@ -269,6 +292,7 @@ export default defineComponent({
         "Contact Us!",
       ],
     };
+   
 
     const descriptions = {
       es: [
@@ -292,6 +316,12 @@ export default defineComponent({
         "We offer simultaneous, consecutive and over-the-phone interpreting services performed by qualified interpreters.",
         "We're at your disposal to address your enquiries and assess how our services can benefit your company. Feel free to reach out to us without any obligation, and we'd be delighted to assist you in exploring the solutions that best meet your business needs.",
       ],
+    };
+
+    const supportTexts = {
+      es: "Actividad apoyada por :",     
+      en: "Activity supported by:",
+      de: "Aktivität unterstützt von:",
     };
 
     const cookieBannerTexts = {
@@ -373,11 +403,45 @@ export default defineComponent({
       privacyPolicyTexts,
       acceptButtonTexts,
       isMobile,
+      supportTexts,
     };
   },
 });
 </script>
 <style scoped>
+.container {
+    position: relative;
+  }
+
+  .image-container {
+    cursor: pointer;
+    transition: filter 0.3s ease-in-out;
+  }
+
+  .image-container:hover {
+    filter: brightness(0.7); /* Ajusta el brillo para oscurecer al pasar el cursor */
+  }
+
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(44, 28, 28);
+    font-weight: bold;
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .image-container:hover .text-overlay {
+    opacity: 1; /* Hace completamente opaco el texto al pasar el cursor */
+  }
+
+  .italic-text {
+    /* display: none; */
+    font-style: italic;
+    font-size: 10px;
+  }
 .carousel-inner img {
   max-width: 100%;
   height: auto;
@@ -466,7 +530,7 @@ export default defineComponent({
   margin: 0;
 }
 .cookie-banner a {
-  color: #007bff;
+  color: #0049A3;
   text-decoration: none;
 }
 .hide-on-mobile {
