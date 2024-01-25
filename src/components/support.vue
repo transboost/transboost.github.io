@@ -16,7 +16,7 @@
 
 
           <img
-            src="@/assets/imgsupport2.webp"
+            src="/assets/imgsupport2.webp"
             class="img-fluid"
             style="max-width: 100%; height: auto;"
             alt="Logo JCYL"
@@ -35,7 +35,7 @@
     name: "Support",
     data() {
     return {
-      pdfLink: "/assets/Doc.pdf", // Ruta del archivo PDF
+      pdfLink: "@/assets/Doc.pdf", // Ruta del archivo PDF
     };
   },
     setup() {
