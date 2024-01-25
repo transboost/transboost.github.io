@@ -434,7 +434,7 @@ export default defineComponent({
   }
 
   .image-container:hover .text-overlay {
-    opacity: 1; 
+    opacity: 1; /* Hace completamente opaco el texto al pasar el cursor */
   }
 
   .italic-text {
@@ -530,7 +530,7 @@ export default defineComponent({
   margin: 0;
 }
 .cookie-banner a {
-  color: #00195e;
+  color: #0300a3;
   text-decoration: none;
 }
 .hide-on-mobile {

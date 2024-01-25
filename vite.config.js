@@ -18,9 +18,11 @@ export default defineConfig({
       maxAge: 31536000, // 1 año en segundos
     },
     headers: {
-      'Cache-Control': 'public, max-age=31536001, immutable',
-      'Content-Security-Policy': "object-src 'none'; script-src 'self' 'unsafe-inline'",
-
+      'Content-Security-Policy': {
+        'object-src': "'none'",
+        'script-src': ["'self'", "'unsafe-inline'"],
+        
+      },
     },
   },
 })

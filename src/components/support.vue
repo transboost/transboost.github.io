@@ -35,7 +35,7 @@
     name: "Support",
     data() {
     return {
-      pdfLink: "@/assets/Doc.pdf", // Ruta del archivo PDF
+      pdfLink: "/assets/Doc.pdf", // Ruta del archivo PDF
     };
   },
     setup() {
