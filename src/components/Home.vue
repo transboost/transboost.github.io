@@ -54,7 +54,7 @@
               <img
                 src="@/assets/logoTH.webp"
                 class="d-block w-75 mx-auto"
-                alt="imagen logo empresa translationHub"
+                alt="logo translationBoost"
                 width="30"
                 height="30"
               />
@@ -181,7 +181,7 @@
               <img
                 src="@/assets/logoTH.webp"
                 class="d-block w-75 mx-auto"
-                alt="logo de empresa translationHub"
+                alt="logo translationBoost"
               />
             </div>
           </div>
@@ -522,7 +522,7 @@ export default defineComponent({
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #eee;
+  background-color: #f0f0f0;
   padding: 10px;
   text-align: center;
 }
@@ -530,7 +530,7 @@ export default defineComponent({
   margin: 0;
 }
 .cookie-banner a {
-  color: #0300a3;
+  color: #000047;
   text-decoration: none;
 }
 .hide-on-mobile {
